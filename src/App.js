@@ -1,15 +1,17 @@
-import {NavigationContainer} from '@react-navigation/native';
+  
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
+
 import Router from './router';
 
-const App = () => {
+function App() {
   return (
     <NavigationContainer>
       <Router />
     </NavigationContainer>
   );
-};
+}
 
 export default App;

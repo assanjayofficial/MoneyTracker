@@ -10,7 +10,7 @@ const SplashScreen = ({navigation}) => {
   }, []);
 
   return (
-    <View style={styles.halaman}>
+    <View style={styles.pagess}>
       <Logo />
       <Text style={styles.text}>Money Tracker</Text>
     </View>
@@ -19,7 +19,7 @@ const SplashScreen = ({navigation}) => {
 
 
 const styles = StyleSheet.create({
-  halaman: {
+  pagess: {
     backgroundColor: '#02CF8E',
     flex: 1,
     justifyContent: 'center',
