@@ -1,12 +1,10 @@
-  
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-
-import {SplashScreen, SignIn, SignUp} from '../pages';
+import {SignIn, SignUp, SplashScreen, Home, AddTransaction} from '../pages';
 
 const Stack = createStackNavigator();
 
-function Router() {
+const Router = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -24,8 +22,18 @@ function Router() {
         component={SignUp}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="AddTransaction"
+        component={AddTransaction}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
-}
+};
 
 export default Router;

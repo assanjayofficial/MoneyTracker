@@ -7,29 +7,28 @@ const SplashScreen = ({navigation}) => {
     setTimeout(() => {
       navigation.replace('SignIn');
     }, 3000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <View style={styles.pagess}>
+    <View style={styles.page}>
       <Logo />
       <Text style={styles.text}>Money Tracker</Text>
     </View>
   );
 };
 
+export default SplashScreen;
 
 const styles = StyleSheet.create({
-  pagess: {
-    backgroundColor: '#02CF8E',
+  page: {
     flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#02CF8E',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     fontSize: 32,
-    fontWeight: '500',
     fontFamily: 'Poppins-Medium',
   },
 });
-
-export default SplashScreen;

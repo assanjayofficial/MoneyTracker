@@ -1,32 +1,30 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
-function Button({text, color = '#02CF8E', textColor = '#020202', onPress}) {
+const Button = ({title, color = '#02CF8E', textColor = '#020202', onPress}) => {
   return (
-    <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
+    <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
       <View style={styles.container(color)}>
-        <Text style={styles.text(textColor)}>{text}</Text>
+        <Text style={styles.text(textColor)}>{title} </Text>
       </View>
     </TouchableOpacity>
   );
-}
+};
+
+export default Button;
 
 const styles = StyleSheet.create({
   container: color => ({
-    backgroundColor: color,
     height: 45,
-    // flex: 1,
+    width: '100%',
+    backgroundColor: color,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,
   }),
-
   text: textColor => ({
-    fontFamily: 'Poppins-Medium',
-    fontWeight: '500',
     fontSize: 14,
+    fontFamily: 'Poppins-Medium',
     color: textColor,
   }),
 });
-
-export default Button;
